@@ -10,8 +10,8 @@ while line != "Search":
         print("The variable number must be an integer")
     else:
         numbers_dictionary[number_as_string] = number
-
-    line = input()
+    finally:
+        line = input()
 
 line = input()
 
@@ -21,9 +21,9 @@ while line != "Remove":
         print(numbers_dictionary[searched])
     except KeyError:
         print("Number does not exist in dictionary")
+    finally:
+        line = input()
 
-    line = input()
-    
 line = input()
 
 while line != "End":
@@ -32,7 +32,7 @@ while line != "End":
         del numbers_dictionary[searched]
     except KeyError:
         print("Number does not exist in dictionary")
-    line = input()
-    
-print(numbers_dictionary)
+    finally:
+        line = input()
 
+print(numbers_dictionary)
