@@ -142,7 +142,7 @@ def transfer_funds(s=None, r=None):
     		balances[index_r]+=int(amount)
     		transaction_histories[index_r].append(int(amount))
     		
-    		print(f"Syccesful! Your current balance: {balances[index_s]} Recipient balance: {balances[index_r]}")
+    		print(f"Syccesful! Your current balance: {balances[index_s]}")
     	else:
     		print(f"Insufficient balance. Max amount to transfer: {balances[index_s]}")
     		print("Retry? y/n")
