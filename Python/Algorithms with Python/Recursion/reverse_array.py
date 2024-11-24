@@ -3,7 +3,7 @@ def a(arr,i):
 		print(*arr)
 		return	
 	arr[i],arr[len(arr)-1-i]=arr[len(arr)-1-i],arr[i]	
-	return a(arr,i+1)
+	a(arr,i+1)
 	
 	
 arr=input().split()
