@@ -3,21 +3,25 @@ from project.user import User
 
 
 class Registration:
-    def add_user(self, user: User, library: Library):
+
+    @staticmethod
+    def add_user(user: User, library: Library):
         if user not in library.user_records:
             library.user_records.append(user)
             library.rented_books[user.username] = {}
         else:
             return f"User with id = {user.user_id} already registered in the library!"
 
-    def remove_user(self, user: User, library: Library):
+    @staticmethod
+    def remove_user(user: User, library: Library):
         if user in library.user_records:
             library.user_records.remove(user)
             library.rented_books.pop(user.username)
         else:
             return "We could not find such user to remove!"
 
-    def change_username(self, user_id: int, new_username: str, library: Library):
+    @staticmethod
+    def change_username(user_id: int, new_username: str, library: Library):
         user_to_change = None
         username_error = False
 
