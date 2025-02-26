@@ -4,7 +4,7 @@ def possible_permutations(lst):
     result=[]
     length=len(lst)
 
-    def a(lst, o):
+    def permutate(lst, o):
 
         if len(o)>=length:
             result.append(list(o))
@@ -14,10 +14,10 @@ def possible_permutations(lst):
             o.append(i)
             new=deepcopy(lst)
             new.remove(i)
-            a(new,o)
+            permutate(new,o)
             o.pop()
 
-    a(lst, [])
+    permutate(lst, [])
     for el in result:
         yield el
 
