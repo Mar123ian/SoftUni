@@ -1,0 +1,46 @@
+body, h1, p{
+    
+    margin: 0;
+}
+
+section{
+    overflow: hidden;
+    width: 100%;
+    background-image: url(images/image1.jpg);
+    min-height: 60vh;
+    background-position:center;
+    background-size: cover;
+    display: block;
+    box-sizing: border-box;
+    /* margin: 0;
+    padding-top: 10em; */
+    position: relative;
+    
+    
+}
+
+.text{
+    font-family: Lato, sans-serif;
+    font-size: x-large;
+    color: white;
+    text-align: center; 
+    /* margin-left: auto; */
+    box-sizing: border-box;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    
+     
+    
+}
+
+html{
+    line-height: 3em;
+}
+
+p{
+    display: inline-block;
+    max-width: 30ch;
+}

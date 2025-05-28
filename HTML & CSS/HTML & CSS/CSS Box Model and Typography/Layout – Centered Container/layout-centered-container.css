@@ -1,0 +1,22 @@
+header, main, footer, body, .class{
+    box-sizing: border-box;
+    text-align: center;
+    padding: 2em;
+}
+
+body{ 
+    margin: 0em;
+    border: 0.5em solid green;
+}
+
+.class{
+    margin: 5em auto;
+    max-width: 900px;
+    border: 0.5em solid rgb(22, 7, 178);
+}
+
+header, main, footer{
+    border: 0.5em solid rgb(0, 0, 0);
+    margin: 3em auto;
+}
+
