@@ -1,0 +1,28 @@
+*{
+    font-family: Lato, sans-serif;
+    line-height: 1.5em;
+}
+
+article{
+    max-width: 900px;
+    margin: 2em auto;
+    border: 1px solid gray;
+    border-radius: 0.3em;
+    padding: 2em;
+}
+
+.summary{
+    font-size: 1.3em;
+}
+
+h1{
+    font-size: 2em;
+}
+
+.info{
+    font-style: italic;
+}
+
+h3{
+    font-size: 1.5em;
+}

@@ -1,0 +1,23 @@
+header, .articles, .banner, footer,.cont{
+    box-sizing: border-box;
+    padding: 1.5em;
+}
+
+body{ 
+    margin: 0em;
+    border: 0.2em solid green;
+    padding: 2em;
+    
+}
+
+.cont{
+    border: 0.2em solid black;
+    margin: 1.5em auto;
+}
+
+header, .articles,footer, .banner{
+    border: 0.2em solid rgb(22, 7, 178);
+    margin: 1.5em auto;
+    max-width: 900px;
+}
+
