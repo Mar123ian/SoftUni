@@ -1,0 +1,71 @@
+/* THIS IS NOT FINISHED!!! */
+
+
+p{
+    display: none;
+}
+
+ul:hover > p{
+    display: block;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    
+}
+header{ 
+    display: flex;
+    flex-direction: row; 
+    border-radius: 0.3em;
+    box-shadow: 0 0 1em  #c5c5c5;   
+    background-color: white;   
+    max-width: 1000px;
+    margin: 2em 2em 0em 2em;
+    justify-content: space-between;
+    padding: 2em;
+}
+
+li{
+    padding: 1em;
+    background-color: #c5c5c5;
+}
+
+.close{
+    display: none;
+}
+
+h1{
+    display: flex;
+    align-items: center;
+}
+
+.opened:hover >.closed menu ul{
+    display: flex;
+    
+}
+.opened:hover >.closed .open{
+    display: none;
+    
+}
+
+.opened:hover >.closed .close{
+    display: block;
+    
+}
+menu ul{
+    position: absolute;
+    top: 90%;
+    transform: translate(-50%,-50%);
+    
+    display: none;
+    flex-direction: column;
+    gap: 0.3em;
+    margin: 0 auto;
+    width: 50%;
+    
+}
+
+
