@@ -1,0 +1,76 @@
+*{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    
+}
+
+body{
+    padding: 0 1em 0 1em;
+}
+form{ 
+    display: flex;
+    flex-direction: column; 
+    border-radius: 0.3em;
+    box-shadow: 0 0 1em  #c5c5c5;   
+    background-color: white;   
+    max-width: 500px;
+    margin: 2em auto;
+    justify-content: space-between;
+    padding: 2em;
+}
+
+h1{
+    margin-bottom: 1em;
+}
+
+fieldset{
+    margin-top: 2em;
+    padding: 2em;
+    border: 0.2em solid rgb(232, 232, 232);
+    border-radius: 0.3em;
+}
+
+button{
+    margin-top: 2em;
+}
+
+legend{
+    margin: 0.5em;
+    padding: 0.5em;
+    font-weight: bold;
+}
+
+button{
+    border: none;
+    background-color:rgb(232, 232, 232) ;
+    width: 100%;
+    padding: 1em;
+    font-weight: bold;
+    font-size: 1.1em;
+}
+
+input{
+    display: block;
+    width: 100%;
+    border: none;
+    border-bottom: 0.2em solid rgb(232, 232, 232);
+}
+
+p:nth-of-type(1){
+    margin-bottom: 2em;
+}
+
+label{
+    font-weight: bold;
+}
+
+.info{
+    font-style: italic;
+    color:rgb(136, 136, 136) ;
+}
+
+input[type="date"]{
+    margin-top: 1em;
+}
