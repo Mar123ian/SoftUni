@@ -1,0 +1,67 @@
+@import url(https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap);
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Inter, sans-serif;
+    box-sizing: border-box;
+    font-size: 1.8vh;
+}
+img{
+    width: 40%;
+    height: auto;
+    display: block;
+    box-shadow: 0.3em 0.3em 0.5em 0.08em  black;
+   
+}
+
+body{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    
+    justify-content: center;
+    background-color: #85DCFF;
+}
+
+h1{
+    font-size: 6vh;
+    width: 60%;
+}
+
+main{
+    display: flex;
+    flex-direction: row;
+    gap: 1em;
+    justify-content: space-between;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+   
+    gap: 2em;
+    
+    
+    
+}
+
+button{
+    padding: 1em 2em;
+    margin-right: 1em;
+    border-radius: 0.3em;
+    border: none;
+}
+
+button:first-child{
+    border: 1px solid black;
+    background-color: #42AA59;
+}
+
+button:first-child:hover{
+    color: white;
+    background-color: black;
+}
