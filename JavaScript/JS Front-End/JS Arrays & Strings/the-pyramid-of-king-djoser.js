@@ -20,14 +20,14 @@ function thePyramidOfKingDjoser(size, step){
     console.log("Lapis Lazuli required: "+Math.ceil(lapisLazuli))
 
     if (size%2==0){
-        console.log("Gold required: 4")
+        console.log("Gold required: "+Math.ceil(4*step))
     }
 
     else{
-        console.log("Gold required: 1")
+        console.log("Gold required: "+Math.ceil(1*step))
     }
 
-    console.log("Final pyramid height: "+Math.floor(floor*step+1))
+    console.log("Final pyramid height: "+Math.floor((floor+1)*step))
 
 }
 
