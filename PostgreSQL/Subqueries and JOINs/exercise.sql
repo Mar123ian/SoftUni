@@ -46,4 +46,3 @@ GROUP BY continent_code)
 SELECT
     min(avg_area) as min_average_area
 FROM continents_avg_area;
-
