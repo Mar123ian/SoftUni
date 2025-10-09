@@ -1,3 +1,4 @@
+-- language: PLpgSQL
 --EXERCISE 20
 WITH row_number AS(
     SELECT

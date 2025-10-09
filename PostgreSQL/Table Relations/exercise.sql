@@ -1,3 +1,4 @@
+-- language: PLpgSQL
 --EXERCISE 14
 SELECT
     mountain_range,

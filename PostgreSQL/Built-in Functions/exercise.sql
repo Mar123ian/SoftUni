@@ -1,3 +1,4 @@
+-- language: PLpgSQL
 --EXERCISE 12
 SELECT
     population,

@@ -1,3 +1,4 @@
+-- language: PLpgSQL
 --EXERCISE 18
 CREATE VIEW view_performance_rating AS
     SELECT

@@ -1,3 +1,4 @@
+-- language: PLpgSQLс
 --EXERCISE 12
 CREATE TABLE logs(
     id SERIAL PRIMARY KEY,

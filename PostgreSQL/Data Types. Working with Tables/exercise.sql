@@ -1,3 +1,4 @@
+-- language: PLpgSQL
 --EXERCISE 0
 CREATE DATABASE minions_db;
 
