@@ -1,3 +1,4 @@
+-- language: PLpgSQL
 --EXERCISE 1
 SELECT * FROM cities
 ORDER BY id;
