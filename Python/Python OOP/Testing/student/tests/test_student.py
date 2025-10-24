@@ -8,13 +8,11 @@ class TestsForStudent(unittest.TestCase):
     def setUp(self):
         pass
 
-
-
     def test_init_without_courses(self):
         s = Student("Ivan")
 
         expected_courses = {}
-        result_courses =s.courses
+        result_courses = s.courses
 
         expected_name = "Ivan"
         result_name = s.name
@@ -24,9 +22,9 @@ class TestsForStudent(unittest.TestCase):
         self.assertEqual(result_courses, expected_courses)
 
     def test_init_with_courses(self):
-        s = Student("Ivan",{"Java":["note", "note2"], "Python":["note3", "note4"]})
+        s = Student("Ivan", {"Java": ["note", "note2"], "Python": ["note3", "note4"]})
 
-        expected_courses = {"Java":["note", "note2"], "Python":["note3", "note4"]}
+        expected_courses = {"Java": ["note", "note2"], "Python": ["note3", "note4"]}
         result_courses = s.courses
 
         expected_name = "Ivan"
@@ -39,11 +37,11 @@ class TestsForStudent(unittest.TestCase):
     def test_enroll_course_name_in_courses(self):
         s = Student("Ivan", {"Java": ["note", "note2"], "Python": ["note3", "note4"]})
 
-        result= s.enroll("Java",["note5", "note6"],"Y")
-        expected="Course already added. Notes have been updated."
+        result = s.enroll("Java", ["note5", "note6"], "Y")
+        expected = "Course already added. Notes have been updated."
 
         self.assertEqual(result, expected)
-        self.assertEqual(s.courses,{"Java": ["note", "note2","note5", "note6"], "Python": ["note3", "note4"]})
+        self.assertEqual(s.courses, {"Java": ["note", "note2", "note5", "note6"], "Python": ["note3", "note4"]})
 
         s = Student("Ivan", {"Java": ["note", "note2"], "Python": ["note3", "note4"]})
 
@@ -53,7 +51,6 @@ class TestsForStudent(unittest.TestCase):
         self.assertEqual(result, expected)
         self.assertEqual(s.courses, {"Java": ["note", "note2", "note5", "note6"], "Python": ["note3", "note4"]})
 
-
     def test_enroll_y(self):
         s = Student("Ivan", {"Java": ["note", "note2"], "Python": ["note3", "note4"]})
 
@@ -61,8 +58,7 @@ class TestsForStudent(unittest.TestCase):
         expected = "Course and course notes have been added."
 
         self.assertEqual(result, expected)
-        self.assertEqual(s.courses, {"Java": ["note", "note2"], "Python": ["note3", "note4"], "C#":["note7", "note8"]})
-
+        self.assertEqual(s.courses, {"Java": ["note", "note2"], "Python": ["note3", "note4"], "C#": ["note7", "note8"]})
 
     def test_enroll_nothing(self):
         s = Student("Ivan", {"Java": ["note", "note2"], "Python": ["note3", "note4"]})
@@ -81,9 +77,7 @@ class TestsForStudent(unittest.TestCase):
 
         self.assertEqual(result, expected)
 
-        self.assertEqual(s.courses,{"Java": ["note", "note2"], "Python": ["note3", "note4"], "C#":[]})
-
-
+        self.assertEqual(s.courses, {"Java": ["note", "note2"], "Python": ["note3", "note4"], "C#": []})
 
     def test_add_notes_course_in_courses(self):
         s = Student("Ivan", {"Java": ["note", "note2"], "Python": ["note3", "note4"]})
@@ -93,8 +87,6 @@ class TestsForStudent(unittest.TestCase):
 
         self.assertEqual(result, expected)
         self.assertEqual(s.courses, {"Java": ["note", "note2", "note9"], "Python": ["note3", "note4"]})
-
-
 
     def test_add_notes_course_not_in_courses(self):
         s = Student("Ivan", {"Java": ["note", "note2"], "Python": ["note3", "note4"]})
@@ -122,15 +114,5 @@ class TestsForStudent(unittest.TestCase):
         self.assertEqual(str(result.exception), "Cannot remove course. Course not found.")
 
 
-if __name__=="__main__":
+if __name__ == "__main__":
     unittest.main()
-
-
-
-
-
-
-
-
-
-

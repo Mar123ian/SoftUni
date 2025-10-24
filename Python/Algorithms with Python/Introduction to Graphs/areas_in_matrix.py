@@ -7,10 +7,10 @@ def dfs(matrix, key, visited, i, j):
     if visited[i][j]:
         return
     visited[i][j] = True
-    dfs(matrix, key, visited, i+1, j)
-    dfs(matrix, key, visited, i, j+1)
-    dfs(matrix, key, visited, i-1, j)
-    dfs(matrix, key, visited, i, j-1)
+    dfs(matrix, key, visited, i + 1, j)
+    dfs(matrix, key, visited, i, j + 1)
+    dfs(matrix, key, visited, i - 1, j)
+    dfs(matrix, key, visited, i, j - 1)
 
 
 n = int(input())
@@ -21,7 +21,7 @@ total = 0
 data = {}
 for i in range(n):
     matrix.append(list(input()))
-    visited.append([False]*m)
+    visited.append([False] * m)
 
 for i in range(n):
     for j in range(m):

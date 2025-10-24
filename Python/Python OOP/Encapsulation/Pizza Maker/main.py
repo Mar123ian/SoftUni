@@ -2,7 +2,6 @@ from project.dough import Dough
 from project.pizza import Pizza
 from project.topping import Topping
 
-
 tomato_topping = Topping("Tomato", 60)
 print(tomato_topping.topping_type)
 print(tomato_topping.weight)

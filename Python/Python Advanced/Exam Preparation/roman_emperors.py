@@ -1,18 +1,16 @@
 def list_roman_emperors(*args, **kwargs):
-
-    successful={}
-    unsuccessful={}
+    successful = {}
+    unsuccessful = {}
 
     for emperor, success in args:
         if success:
-            successful[emperor]=kwargs[emperor]
+            successful[emperor] = kwargs[emperor]
         else:
-            unsuccessful[emperor]=kwargs[emperor]
+            unsuccessful[emperor] = kwargs[emperor]
 
-
-    successful=sorted(successful.items(), key=lambda x: (-x[1], x[0]))
+    successful = sorted(successful.items(), key=lambda x: (-x[1], x[0]))
     unsuccessful = sorted(unsuccessful.items(), key=lambda x: (x[1], x[0]))
-    output=[]
+    output = []
     output.append(f"Total number of emperors: {len(args)}")
 
     if successful:
@@ -28,7 +26,6 @@ def list_roman_emperors(*args, **kwargs):
     return "\n".join(output)
 
 
-
-
-
-print(list_roman_emperors(("Augustus", True), ("Trajan", True), ("Nero", False), ("Caligula", False), ("Pertinax", False), ("Vespasian", True), Augustus=40, Trajan=19, Nero=14, Caligula=4, Pertinax=4, Vespasian=19,))
+print(
+    list_roman_emperors(("Augustus", True), ("Trajan", True), ("Nero", False), ("Caligula", False), ("Pertinax", False),
+                        ("Vespasian", True), Augustus=40, Trajan=19, Nero=14, Caligula=4, Pertinax=4, Vespasian=19, ))

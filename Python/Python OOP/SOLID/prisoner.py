@@ -1,9 +1,11 @@
 import copy
 
+
 class Person:
 
     def __init__(self, position):
         self.position = position
+
 
 class FreePerson(Person):
     def walk_north(self, dist):
@@ -21,7 +23,6 @@ class Prisoner(Person):
         self.is_free = False
 
 
-
 prisoner = Prisoner()
 print("The prisoner trying to walk to north by 10 and east by -3.")
 
@@ -33,4 +34,3 @@ except:
 
 print(f"The location of the prison: {prisoner.PRISON_LOCATION}")
 print(f"The current position of the prisoner: {prisoner.position}")
-

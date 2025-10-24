@@ -1,5 +1,6 @@
 from pokemon import Pokemon
 from trainer import Trainer
+
 pokemon = Pokemon("Pikachu", 90)
 
 print(pokemon.pokemon_details())

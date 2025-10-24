@@ -13,16 +13,13 @@ while True:
 
 
 def dfs(graph, visited, cycles, node, iscycle):
-
     visited.add(node)
     cycles.add(node)
     for child in graph[node]:
 
         if child in cycles:
-            
             return True
         if child not in visited and child in graph.keys():
-
             iscycle = dfs(graph, visited, cycles, child, iscycle)
     cycles.remove(node)
     return iscycle

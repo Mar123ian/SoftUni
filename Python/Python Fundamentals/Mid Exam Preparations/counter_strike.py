@@ -18,4 +18,3 @@ while True:
         print(
             f"Not enough energy! Game ends with {won} won battles and {energy} energy")
         break
-

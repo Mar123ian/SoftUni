@@ -1,8 +1,8 @@
 from django.db import models
 
+
 # Create your models here.
 class Book(models.Model):
-
     class Genre(models.TextChoices):
         FICTION = "fiction", "fiction"
         NON_FICTION = "non-fiction", "non-fiction"
@@ -20,4 +20,3 @@ class Book(models.Model):
 
     def __str__(self):
         return self.title
-

@@ -14,13 +14,12 @@ class Rectangle(Shape):
         self.height = height
 
     def calculate_area(self):
-        return self.width*self.height
+        return self.width * self.height
 
 
 class AreaCalculator:
 
     def __init__(self, shapes):
-
         assert isinstance(shapes, list), "`shapes` should be of type `list`."
         self.shapes = shapes
 
@@ -39,11 +38,10 @@ class Triangle:
         self.height = height
 
     def calculate_area(self):
-        return self.width * self.height*0.5
+        return self.width * self.height * 0.5
 
 
 shapes = [Rectangle(1, 6), Triangle(2, 3)]
 calculator = AreaCalculator(shapes)
 
 print("The total area is: ", calculator.total_area)
-

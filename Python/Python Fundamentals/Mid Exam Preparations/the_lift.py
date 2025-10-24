@@ -2,8 +2,7 @@ people = int(input())
 lift = [int(el) for el in input().split()]
 
 for i in range(len(lift)):
-
-    people_to_add = 4-lift[i] if people >= 4 else people
+    people_to_add = 4 - lift[i] if people >= 4 else people
     people -= people_to_add
     lift[i] += people_to_add
 

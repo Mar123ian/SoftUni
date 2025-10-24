@@ -1,12 +1,14 @@
 import time
 
+
 def exec_time(func):
     def wrapper(*args):
-        start=time.time()
+        start = time.time()
         func(*args)
-        stop=time.time()
-        result=stop-start
+        stop = time.time()
+        result = stop - start
         return result
+
     return wrapper
 
 
@@ -16,4 +18,6 @@ def concatenate(strings):
     for string in strings:
         result += string
     return result
+
+
 print(concatenate(["a" for i in range(1000000)]))

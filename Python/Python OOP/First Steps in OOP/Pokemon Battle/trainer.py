@@ -1,7 +1,6 @@
 from project.pokemon import Pokemon
 
 
-
 class Trainer:
     def __init__(self, name, pokemons=[]):
         self.pokemons = pokemons
@@ -15,8 +14,8 @@ class Trainer:
 
     def release_pokemon(self, pokemon):
         for el in self.pokemons:
-            if el.name==pokemon:
-                pokemon=el
+            if el.name == pokemon:
+                pokemon = el
                 break
         if pokemon in self.pokemons:
             self.pokemons.remove(pokemon)
@@ -24,11 +23,10 @@ class Trainer:
         return "Pokemon is not caught"
 
     def trainer_data(self) -> str:
-        info=[f"Pokemon Trainer {self.name}",
-              f"Pokemon count {len(self.pokemons)}"]
+        info = [f"Pokemon Trainer {self.name}",
+                f"Pokemon count {len(self.pokemons)}"]
 
         for p in set(self.pokemons):
             info.append(f"- {p.pokemon_details()}")
 
         return "\n".join(info)
-
