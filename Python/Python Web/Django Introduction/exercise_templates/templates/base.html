@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="bg">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BookVerse – Книги и отзиви</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{% static 'base.css' %}" />
+  {% block styles %}{% endblock %}
+</head>
+<body>
+
+<header>
+    <div class="mobile-overlay"></div>
+  <div class="container nav">
+    <div class="logo">Book<span>Verse</span></div>
+
+    <nav class="nav-links">
+      <a href="{% url 'home' %}">Начало</a>
+      <a href="{% url 'show_all_books' %}">Книги</a>
+      <a href="{% url 'show_all_reviews' %}">Отзиви</a>
+      <a href="#">Общност</a>
+    </nav>
+
+
+    <button class="menu-toggle" aria-label="Меню">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </div>
+</header>
+
+<main>
+  {% block main_content %}
+  {% endblock %}
+</main>
+
+<footer>
+  <p>© 2026 BookVerse • Книги и отзиви от читатели</p>
+</footer>
+
+
+<script>
+  const toggle = document.querySelector('.menu-toggle');
+  const nav = document.querySelector('.nav-links');
+  const overlay = document.querySelector('.mobile-overlay');
+
+  function closeMenu() {
+    nav.classList.remove('active');
+    overlay.classList.remove('active');
+  }
+
+  toggle.addEventListener('click', () => {
+    nav.classList.toggle('active');
+    overlay.classList.toggle('active');
+  });
+
+  overlay.addEventListener('click', closeMenu);
+
+  nav.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', closeMenu);
+  });
+</script>
+
+
+</body>
+</html>

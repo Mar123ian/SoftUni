@@ -1,0 +1,14 @@
+{% load filters %}
+
+
+
+<article class="card">
+    <a href="{% url 'show_book' book.slug %}">
+          <div class="book-cover"></div>
+          <h3>{{book.title|capitalize_title}}</h3>
+          <div class="author">{{book.author}}</div>
+          <p class="review">{{book.description}}</p>
+        </a>
+
+</article>
+

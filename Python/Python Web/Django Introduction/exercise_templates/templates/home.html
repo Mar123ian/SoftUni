@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block main_content %}
+
+    <section class="hero">
+      <h1>Открий следващата си любима книга</h1>
+      <p>
+        Чети отзиви от реални читатели, споделяй мнението си и създай
+        своя лична библиотека от незабравими истории.
+      </p>
+      <div class="hero-actions">
+        <a href="{% url 'show_all_books' %}" class="btn btn-primary">Покажи всички книги</a>
+        <button class="btn btn-secondary">Напиши отзив</button>
+      </div>
+    </section>
+
+
+{% endblock %}
+
+

@@ -1,0 +1,131 @@
+
+
+
+
+
+p {
+    margin-bottom: 0.8rem;
+    line-height: 1.5;
+}
+
+
+.bfi-section-title h2 {
+    margin-bottom: 0.5rem;
+    text-align: center;
+}
+
+.bfi-section-title p {
+    margin-bottom: 2rem;
+    color: var(--muted);
+    text-align: center;
+}
+
+
+
+.bfi-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+    align-items: start;
+}
+
+
+
+.bfi-book-cover-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.bfi-book-cover {
+    width: 100%;
+    max-width: 350px;
+    height: 450px;
+    background: linear-gradient(135deg, #6c7cff, #8a5cff);
+    border-radius: 1rem;
+}
+
+
+
+.book-full-info {
+    color: var(--text);
+}
+
+
+
+.reviews-section {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.card {
+    width: 100%;
+    padding: 1rem;
+    border-radius: 0.75rem;
+    background: var(--card);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+}
+
+.card .author {
+    font-weight: 600;
+}
+
+.card .rating {
+    color: #f5a623;
+    margin-bottom: 0.5rem;
+}
+
+.card .review {
+    font-size: 0.95rem;
+}
+
+
+
+h3 {
+    display: none;
+}
+
+
+
+@media (min-width: 992px) {
+    .bfi-container {
+        grid-template-columns: 350px 1fr 1fr;
+    }
+
+    .bfi-book-cover-wrapper {
+        justify-content: flex-start;
+    }
+}
+
+.reviews-section {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+@media (min-width: 992px) {
+
+    .reviews-section {
+        max-height: 450px;
+        overflow-y: auto;
+        padding-right: 0.5rem;
+    }
+
+
+    .reviews-section::-webkit-scrollbar {
+        width: 6px;
+    }
+
+    .reviews-section::-webkit-scrollbar-thumb {
+        background-color: rgba(0, 0, 0, 0.25);
+        border-radius: 10px;
+    }
+}
+
+
+
+
+
+
+

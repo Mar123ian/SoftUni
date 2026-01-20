@@ -1,7 +1,6 @@
 from django.shortcuts import redirect
 from django.urls import path, reverse, include
-
-from destinations import views
+from . import views
 
 urlpatterns = [
     path('', views.redirect_empty_path, name='redirect_empty_path'),

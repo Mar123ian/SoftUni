@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+{% load filters %}
+{% load static %}
+
+{% block styles %}
+<link rel="stylesheet" href="{% static 'book_full_info.css' %}" />
+  {% endblock %}
+
+{% block main_content %}
+
+<section>
+  <div class="bfi-section-title">
+    <h2>Детайли за книгата</h2>
+    <p>Информация за избраното заглавие</p>
+  </div>
+
+  <div class="bfi-container">
+  <div class="bfi-book-cover-wrapper">
+    <div class="bfi-book-cover"></div>
+  </div>
+
+  <div class="book-full-info">
+    <p><strong>Заглавие: </strong>{{book.title|capitalize_title}}</p>
+    <p><strong>Цена: </strong>{{book.price}} лв.</p>
+    <p><strong>ISBN: </strong>{{book.isbn}}</p>
+    <p><strong>Жанр: </strong>{{book.genre}}</p>
+    <p><strong>Дата на издаване: </strong>{{book.publishing_date|date:'Y-m-d'}}</p>
+    <p><strong>Описание: </strong>{{book.description|default:'Няма налично описание'}}</p>
+  </div>
+
+  <div class="reviews-section">
+    {% for review in book.reviews.all %}
+      <article class="card">
+        <div class="author">{{review.author}}</div>
+        <div class="rating">{{review.rating}}</div>
+        <p class="review">{{review.body}}</p>
+      </article>
+    {% empty %}
+      <p>Няма налични отзиви.</p>
+    {% endfor %}
+  </div>
+</div>
+</section>
+{% endblock %}

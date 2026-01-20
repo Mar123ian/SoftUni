@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% load inclusion_tags %}
+
+{% block main_content %}
+
+<section>
+      <div class="section-title">
+        <h2>Популярни книги</h2>
+        <p>Най-обсъжданите заглавия този месец</p>
+      </div>
+
+    <div class="grid">
+
+        {% for book in books %}
+            {% books_short_info book %}
+        {% empty %}
+            <p>Няма налична информация за книги този месец.</p>
+        {% endfor %}
+
+
+        </div>
+
+</section>
+
+{% endblock %}

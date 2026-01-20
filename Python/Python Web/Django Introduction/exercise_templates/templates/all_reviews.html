@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block main_content %}
+    <section>
+  <div class="section-title">
+    <h2>Последни отзиви</h2>
+    <p>Мнения от читатели за любимите им книги</p>
+  </div>
+
+  <div class="grid">
+
+      {% for review in reviews %}
+
+      <article class="card">
+      <h3>{{review.book.title}}</h3>
+      <div class="author">{{review.author}}</div>
+      <div class="rating">{{review.rating}}</div>
+      <p class="review">{{review.body}}</p>
+    </article>
+      {% endfor %}
+
+
+
+  </div>
+</section>
+{% endblock %}
+
