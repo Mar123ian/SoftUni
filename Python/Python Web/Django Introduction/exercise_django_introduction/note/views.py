@@ -3,7 +3,7 @@ from http.client import responses
 from django.http import HttpResponse, JsonResponse
 from django.shortcuts import render
 
-from models import Note, Category
+from .models import Note, Category
 
 
 # Create your views here.
