@@ -3,8 +3,13 @@
 
 
 <article class="card">
+
     <a href="{% url 'show_book' book.slug %}">
-          <div class="book-cover"></div>
+          <div class="book-cover">
+              {% if book.image %}
+        <img src="{{book.image.url}}" alt="{{book.title}}" >
+        {% endif %}
+          </div>
           <h3>{{book.title|capitalize_title}}</h3>
           <div class="author">{{book.author}}</div>
           <p class="review">{{book.description}}</p>

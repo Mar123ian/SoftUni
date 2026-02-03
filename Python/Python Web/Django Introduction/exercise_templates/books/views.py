@@ -1,6 +1,8 @@
 from django.shortcuts import render, redirect, get_object_or_404
 from .models import Book
 from .forms import AddBookForm, UpdateBookForm, DeleteBookForm
+from reviews.forms import AddReviewForm
+from reviews.utils import save_review_for_book
 
 # Create your views here.
 def show_all_books(request):
@@ -10,10 +12,16 @@ def show_all_books(request):
 
 def show_book(request, book_slug):
     book = Book.objects.get(slug=book_slug)
-    return render(request, 'book_full_info.html', {'book': book})
+    form = AddReviewForm(request.POST or None)
+
+    if request.method == 'POST' and form.is_valid():
+        save_review_for_book(form, book)
+        return redirect('show_book', book_slug)
+
+    return render(request, 'book_full_info.html', {'book': book, 'form': form})
 
 def add_book(request):
-    form = AddBookForm(request.POST or None)
+    form = AddBookForm(request.POST or None, request.FILES or None)
 
     if request.method == 'POST' and form.is_valid():
         form.save()
@@ -23,7 +31,7 @@ def add_book(request):
 
 def edit_book(request, id):
     book = get_object_or_404(Book, id=id)
-    form = UpdateBookForm(request.POST or None, instance=book)
+    form = UpdateBookForm(request.POST or None, request.FILES or None,instance=book)
 
     if request.method == 'POST' and form.is_valid():
         form.save()

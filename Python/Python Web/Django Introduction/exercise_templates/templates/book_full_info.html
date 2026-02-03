@@ -16,7 +16,9 @@
 
   <div class="bfi-container">
   <div class="bfi-book-cover-wrapper">
-    <div class="bfi-book-cover"></div>
+        {% if book.image %}
+        <img src="{{book.image.url}}" alt="{{book.title}}" >
+        {% endif %}
   </div>
 
   <div class="book-full-info">
@@ -26,7 +28,16 @@
     <p><strong>Жанр: </strong>{{book.genre}}</p>
     <p><strong>Дата на издаване: </strong>{{book.publishing_date|date:'Y-m-d'}}</p>
     <p><strong>Описание: </strong>{{book.description|default:'Няма налично описание'}}</p>
+
+      <a href="{% url 'edit_book' book.id %}" class="btn btn-secondary">Edit</a>
+
+              <a href="{% url 'delete_book' book.id %}" class="btn btn-secondary">Delete</a>
+
+      {% include 'add_review.html' %}
+
   </div>
+
+
 
   <div class="reviews-section">
     {% for review in book.reviews.all %}

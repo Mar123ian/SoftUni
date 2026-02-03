@@ -1,6 +1,7 @@
 from django.db import models
 from django.utils.text import slugify
 from django.core.validators import MinLengthValidator
+from .validators import BadWordsValidator
 
 
 class Book(models.Model):
@@ -35,9 +36,9 @@ class Book(models.Model):
 
     publishing_date = models.DateField()
 
-    description = models.TextField()
+    description = models.TextField(validators=[BadWordsValidator(["badword1", "badword2"])])
 
-    image_url = models.URLField()
+    image = models.ImageField(upload_to='images/', null=True, blank=True)
 
     slug = models.SlugField(
         max_length=255,
