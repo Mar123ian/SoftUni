@@ -63,4 +63,8 @@ class DeleteBookForm(BookFormBase):
             self.fields[field].widget.attrs['disabled'] = True
             self.fields[field].required = False
 
+class SearchBookAndFilterForm(forms.Form):
+    search_query = forms.CharField(max_length=100, required=False)
+    genre = forms.ChoiceField(choices=[('', '---')] + list(Book.Genre.choices), required=False, )
+
 

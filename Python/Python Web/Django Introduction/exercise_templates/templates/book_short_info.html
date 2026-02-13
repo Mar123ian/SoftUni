@@ -4,7 +4,7 @@
 
 <article class="card">
 
-    <a href="{% url 'show_book' book.slug %}">
+    <a href="{{ book.get_absolute_url }}">
           <div class="book-cover">
               {% if book.image %}
         <img src="{{book.image.url}}" alt="{{book.title}}" >

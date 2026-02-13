@@ -1,4 +1,5 @@
 from django.db import models
+from django.urls import reverse
 from django.utils.text import slugify
 from django.core.validators import MinLengthValidator
 from .validators import BadWordsValidator
@@ -47,6 +48,9 @@ class Book(models.Model):
     )
 
     updated_at = models.DateTimeField(auto_now=True)
+
+    def get_absolute_url(self):
+        return reverse('show_book', kwargs={'book_slug': self.slug})
 
     def save(self, *args, **kwargs):
         if not self.slug:
